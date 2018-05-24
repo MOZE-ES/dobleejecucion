@@ -12,22 +12,31 @@ public class DibujoCartesianas {
     //El origen (0,0) está en la esquina inferior izquierda
 
     private static Color devuelveColor(double x, double y) {
-        if (x < 0.23) {
-            return new Color(5, 11, 198);
+        if (x < 0.33) {
+            if (y < 0.22 && y > 0.11) {
+                return new Color(219, 10, 19);
+            }
+            if (y < 0.44 && y > 0.33) {
+                return new Color(219, 10, 19);
+            }
+            if (y < 0.66 && y > 0.55) {
+                return new Color(219, 10, 19);
+            }
+            if (y < 0.88 && y > 0.77) {
+                return new Color(219, 10, 19);
+            }
+            return new Color(247, 244, 30);
         }
 
-        if (y < 0.22 && y > 0.11) {
-            return new Color(198, 11, 30);
+        if (x > 0.33) {
+            if (y < 0.50 && y > 0.0) {
+                return new Color(219, 10, 19);
+            }
+            if (y < 1 && y > 0.50) {
+                return new Color(0, 115, 189);
+            }
         }
-        if (y < 0.44 && y > 0.33) {
-            return new Color(198, 11, 30);
-        }
-        if (y < 0.66 && y > 0.55) {
-            return new Color(198, 11, 30);
-        }
-        if (y < 0.88 && y > 0.77) {
-            return new Color(198, 11, 30);
-        }
+
         return new Color(247, 244, 30);
     }
 
